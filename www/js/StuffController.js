@@ -60,6 +60,8 @@ var StuffController = (function(window){
 		var timer = parseInt(Math.random()*2000)+1000;
 		setTimeout(function(){
 			$('body').append('<div class="status">' + appName +' done executing random async stuff after ' +timer +'ms.');	
+			stuffCounter++;
+
 			if(typeof callback == 'function'){
 				callback(timer);
 			}
